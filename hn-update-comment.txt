@@ -1,10 +1,2 @@
-
-
-The "single hard drive" claim was wrong and I've corrected it to "roughly 10
-consumer hard drives" (44TB ÷ ~4TB = ~11). Attribution to Karpathy is now a
-direct link. Added a caveat under the stats noting these are representative
-2024-era figures — the exact numbers shift with every release and that's
-somewhat the point.
-
-Also did a full visual redesign (linked in the header as v2) with a proper top
-navigation bar after a few people found the dot nav hard to use.
+Update: The "single hard drive" claim was wrong and I've corrected it to "roughly 10 consumer hard drives" (44TB ÷ ~4TB = ~11). Attribution to Karpathy is now a direct link. Added a caveat under the stats noting these are representative 2024-era figures — the exact numbers shift with every release and that's somewhat the point. Also did a few iterations on visual redesign (linked in the header as v2) with a proper top navigation bar after a few people found the dot nav hard to use and UI was jumping.
+Also I have not fact checked everything but I have read it and it seems to be aligned with what is described in the lecture.
