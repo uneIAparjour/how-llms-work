@@ -802,13 +802,15 @@ p.body-text{color:var(--txt);font-size:15.5px;line-height:1.8;margin-bottom:16px
     <!-- Interactive demo -->
     <div class="fade-up" style="margin-top:8px">
       <h3 class="sub-title" style="color:#F97316;margin-bottom:16px">Effect on Predictions</h3>
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap">
-        <div class="insight-box" style="flex:1;min-width:260px;margin-top:0">
+      <div style="margin-bottom:20px">
+        <div class="insight-box" style="margin-top:0;margin-bottom:14px">
           <strong style="color:#F97316">Query</strong>
           "What is the administrative capital of the Ares Base colony?"
         </div>
-        <button class="btn btn-primary" id="rag-run-btn" style="background:#F97316;color:#000;white-space:nowrap" aria-label="Run RAG pipeline animation">▶ Run RAG Query</button>
-        <button class="btn btn-ghost" id="rag-reset-btn" style="border-color:rgba(249,115,22,0.3);color:#F97316" aria-label="Reset RAG demo">Reset</button>
+        <div style="display:flex;gap:12px">
+          <button class="btn btn-primary" id="rag-run-btn" style="background:#F97316;color:#000" aria-label="Run RAG pipeline animation">▶ Run RAG Query</button>
+          <button class="btn btn-ghost" id="rag-reset-btn" style="border-color:rgba(249,115,22,0.3);color:#F97316" aria-label="Reset RAG demo">Reset</button>
+        </div>
       </div>
 
       <div class="rag-step-num" style="margin-bottom:10px">Knowledge Base — 4 documents</div>
