@@ -1,2 +1,5 @@
-Update: The "single hard drive" claim was wrong and I've corrected it to "roughly 10 consumer hard drives" (44TB ÷ ~4TB = ~11). Attribution to Karpathy is now a direct link. Added a caveat under the stats noting these are representative 2024-era figures — the exact numbers shift with every release and that's somewhat the point. Also did a few iterations on visual redesign (linked in the header as v2) with a proper top navigation bar after a few people found the dot nav hard to use and UI was jumping.
-Also I have not fact checked everything but I have read it and it seems to be aligned with what is described in the lecture.
+Mise à jour, par Yash Narwal : L'affirmation du « disque dur unique » était inexacte, je l'ai corrigée en « environ 10 disques durs grand public » (44 To ÷ ~4 To = ~11). La référence à Karpathy est désormais un lien direct. J'ai ajouté une note de bas de statistiques précisant que ces chiffres sont représentatifs des modèles de l'ère 2024 — les valeurs exactes évoluent à chaque nouvelle version, et c'est un peu là l'essentiel. J'ai également effectué quelques itérations sur la refonte visuelle (accessible via le lien v2 dans l'en-tête), avec une vraie barre de navigation en haut, après que plusieurs personnes ont trouvé la navigation par points difficile à utiliser et que l'interface avait des sauts visuels.
+Je n'ai pas vérifié chaque fait individuellement, mais j'ai lu l'ensemble et le contenu me semble cohérent avec ce qui est décrit dans la conférence.
+
+
+Traduction : Bertrand Formet pour uneIAparjour.fr, avec Claude (Anthropic)
