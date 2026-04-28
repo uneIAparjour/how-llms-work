@@ -360,7 +360,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <p class="hero-sub">Un parcours complet sur la construction des grands modèles de langage — du texte brut d'internet à un assistant conversationnel. Basé sur l'analyse technique d'Andrej Karpathy.</p>
         <div class="attribution-box" role="note" aria-label="Crédits et origine">
           <span class="attr-badge">Traduction</span>
-          Traduction et adaptation en français de la création originale de <a href="https://github.com/ynarwal/how-llms-work" target="_blank" rel="noopener" class="attr-link">ynarwal <span aria-hidden="true">↗</span></a> par <strong>Bertrand Formet</strong> pour <a href="https://uneiaparjour.fr" target="_blank" rel="noopener" class="attr-link">uneIAparjour.fr <span aria-hidden="true">↗</span></a>, produite avec l'aide de <strong>Claude</strong> (Anthropic).<br>
+          Traduction et adaptation en français de la création originale de <a href="https://github.com/ynarwal/how-llms-work" target="_blank" rel="noopener" class="attr-link">ynarwal <span aria-hidden="true">↗</span></a>, avec l'accord de son auteur, par <strong>Bertrand Formet</strong> pour <a href="https://uneiaparjour.fr" target="_blank" rel="noopener" class="attr-link">uneIAparjour.fr <span aria-hidden="true">↗</span></a>, produite avec l'aide de <strong>Claude</strong> (Anthropic).<br>
         </div>
         <dl class="hero-stats">
           <div class="stat-item"><dt class="stat-lbl">Tokens d'entraînement</dt><dd class="stat-val">15T</dd></div>
@@ -495,7 +495,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <svg id="transformer-svg" viewBox="0 0 360 340" width="100%" style="background:var(--card);border:1px solid var(--border);border-radius:10px;display:block;margin-bottom:16px" role="img" aria-label="Diagramme de l'architecture Transformer montrant le flux de données depuis les tokens d'entrée à travers les couches d'intégration (embedding), d'attention et d'anticipation jusqu'aux valeurs de sortie"><title>Architecture Transformer</title></svg>
         <div class="insight-box">
           <strong>Qu'est-ce qu'un embedding ?</strong>
-          Chaque identifiant de token correspond à un vecteur d'environ 1 000 à 4 000 nombres appelé son <em>embedding</em>. Imaginez-le comme une coordonnée dans l'espace sémantique — initialisé aléatoirement, puis façonné par l'entraînement. Les <em>couches d'attention</em> intègrent ensuite le contexte des tokens environnants, si bien qu'en profondeur dans le réseau, « lettre » dans « les lettres de l'alphabet » et « lettre » dans « la lettre déposée par la factrice » portent des représentations totalement différentes. La polysémie est résolue par le contexte, pas par le stockage de plusieurs sens par token.
+          Chaque identifiant de token correspond à un vecteur d'environ 1 000 à 4 000 nombres appelé "<em>embedding</em>". Imaginez-le comme un point avec des coordonnées dans l'espace sémantique — positionné aléatoirement, puis façonné par l'entraînement. Les <em>couches d'attention</em> intègrent ensuite le contexte des tokens environnants, si bien qu'en profondeur dans le réseau, « lettre » dans « une lettre de l'alphabet » et « lettre » dans « la lettre déposée par la factrice » portent des représentations totalement différentes. La polysémie est résolue par le contexte, pas par le stockage de plusieurs sens par token.
         </div>
       </div>
     </div>
@@ -504,10 +504,10 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div>
           <p style="font-family:var(--dm);font-size:11px;color:var(--txt2);margin-bottom:10px">Sélectionnez une étape d'entraînement pour voir la qualité des sorties du modèle</p>
           <div class="training-stages" id="training-stages" role="group" aria-label="Sélecteur d'étape d'entraînement">
-            <button class="stage-btn" data-step="1" aria-pressed="false">Étape 1<br><span style="color:var(--red)">Perte : 11,2</span></button>
-            <button class="stage-btn active" data-step="500" aria-pressed="true">Étape 500<br><span style="color:var(--amber)">Perte : 4,8</span></button>
-            <button class="stage-btn" data-step="5000" aria-pressed="false">Étape 5K<br><span style="color:var(--purple)">Perte : 3,1</span></button>
-            <button class="stage-btn" data-step="32000" aria-pressed="false">Étape 32K<br><span style="color:var(--green)">Perte : 2,4</span></button>
+            <button class="stage-btn" data-step="1" aria-pressed="false">1ère étape<br><span style="color:var(--red)">Perte : 11,2</span></button>
+            <button class="stage-btn active" data-step="500" aria-pressed="true">500ème étape<br><span style="color:var(--amber)">Perte : 4,8</span></button>
+            <button class="stage-btn" data-step="5000" aria-pressed="false">5000ème étape<br><span style="color:var(--purple)">Perte : 3,1</span></button>
+            <button class="stage-btn" data-step="32000" aria-pressed="false">32000 ème étape<br><span style="color:var(--green)">Perte : 2,4</span></button>
           </div>
           <div class="loss-canvas-wrap">
             <div class="loss-label">Perte d'entraînement ↓</div>
@@ -525,7 +525,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
           </div>
           <div class="insight-box" style="margin-top:14px">
             <strong>Ce que le modèle apprend</strong>
-            À l'étape 1 : bruit pur. À l'étape 500 : une cohérence locale apparaît. À l'étape 32K : du texte fluide. Le modèle apprend la grammaire, les faits, les raisonnements — tout implicitement par prédiction de token.
+            À l'étape 1 : bruit pur. À la 500ème étape : une cohérence locale apparaît. À la 32000 étape : du texte fluide. Le modèle modélise et mémorise la grammaire, les faits, les raisonnements — le tout implicitement par prédiction de token.
           </div>
         </div>
       </div>
@@ -540,24 +540,24 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="chapter-badge">Chapitre 1 · Pré-entraînement · Étape 4</div>
       <h2 class="section-title">Inférence &<br>échantillonnage</h2>
       <p class="body-text">Une fois entraîné, le réseau génère du texte de manière <em>autoregressive</em> : alimenter une séquence de tokens → obtenir une <span class="highlight">distribution de probabilité</span> sur les 100 000 tokens possibles suivants → en échantillonner un → l'ajouter → recommencer.</p>
-      <p class="body-text">Ce processus est <span class="highlight-a">stochastique</span> — le même prompt génère des sorties différentes à chaque fois, car on tire au sort selon des probabilités biaisées. Les tokens plus probables ont plus de chances d'être choisis, sans garantie.</p>
-      <p class="body-text">La <span class="highlight">température</span> contrôle l'aléatoire. Température basse (0,1) → le modèle choisit toujours le token le plus probable. Haute (2,0) → chaos uniforme. Entre 0,7 et 1,0, c'est la zone idéale pour un texte cohérent mais créatif.</p>
+      <p class="body-text">Ce processus est <span class="highlight-a">stochastique</span> — la même instruction génère des sorties différentes à chaque fois, car on tire au sort selon des probabilités biaisées. Les tokens plus probables ont plus de chances d'être choisis, sans garantie.</p>
+      <p class="body-text">La <span class="highlight">température</span> contrôle l'aléatoire. Température basse (0,1) → le modèle choisit toujours le token le plus probable. Haute (2,0) → chaos uniforme. La zone idéale pour un texte cohérent mais créatif est située entre 0,7 et 1,0.</p>
       <div class="insight-box">
-        <strong>Modèle mental essentiel</strong>
-        Le modèle ne « réfléchit » pas à ce qu'il va dire. Il calcule une distribution de probabilité sur tous les tokens suivants possibles et en échantillonne un. Chaque mot est un tirage au sort — très informé, mais aléatoire quand même.
+        <strong>Point essentiel</strong>
+        Le modèle ne « réfléchit » pas à ce qu'il va dire. Il calcule une distribution de probabilité sur tous les tokens suivants possibles et en échantillonne un. Chaque mot est un tirage au sort — certes très documenté, mais quand même aléatoire
       </div>
     </div>
     <div class="fade-up" style="animation-delay:.15s">
       <h3 class="sub-title" style="margin-bottom:14px" id="sampling-heading">Démo d'échantillonnage de tokens</h3>
       <div class="inference-demo" aria-labelledby="sampling-heading">
-        <p style="font-family:var(--dm);font-size:11px;color:var(--txt2);margin-bottom:12px">Observez le modèle choisir le prochain mot. Chaque barre indique la probabilité d'un token candidat.</p>
+        <p style="font-family:var(--dm);font-size:11px;color:var(--txt2);margin-bottom:12px">Observez le modèle choisir le prochain mot. Chaque barre indique la probabilité d'un token possible.</p>
         <div class="generated-seq" id="gen-seq" aria-live="polite" aria-label="Séquence de tokens générée">Le ciel apparaît bleu</div>
         <label class="temp-label" for="temp-slider">
           <span>Température <span style="color:var(--txt2);font-size:10px">(aléatoire)</span></span>
           <input type="range" class="temp-slider" id="temp-slider" min="0.1" max="2.0" step="0.1" value="0.8" aria-label="Température : contrôle l'aléatoire. Faible=prévisible, Élevée=aléatoire">
           <span class="temp-val" id="temp-val" aria-live="polite">0.8</span>
         </label>
-        <div class="prob-section-label" id="prob-label">Tokens candidats suivants</div>
+        <div class="prob-section-label" id="prob-label">Tokens possibles suivants</div>
         <div class="prob-bars" id="prob-bars" role="list" aria-labelledby="prob-label"></div>
         <div class="inference-controls">
           <button class="btn btn-primary btn-sm" id="sample-btn" aria-describedby="sample-info">Échantillonner le prochain token</button>
@@ -576,9 +576,9 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="fade-up">
         <div class="chapter-badge">Chapitre 2 · Le modèle de base</div>
         <h2 class="section-title">Le simulateur<br>d'Internet</h2>
-        <p class="body-text">Après le pré-entraînement, on obtient un <span class="highlight">modèle de base</span> — un moteur d'autocomplétion sophistiqué. Ce n'est pas un assistant. Il ne répond pas aux questions. Il <em>continue des séquences de tokens</em> selon ce qu'il a vu sur internet.</p>
-        <p class="body-text">Donnez-lui une phrase Wikipedia et il la complétera de mémoire. Demandez-lui « Combien font 2+2 ? » et il pourrait vous donner une page de manuel de maths, une feuille de réponses, ou partir sur une tangente — selon ce qui était statistiquement fréquent dans ses données d'entraînement.</p>
-        <p class="body-text">La connaissance du modèle de base réside dans ses <span class="highlight-a">405 milliards de paramètres</span> — une compression avec perte d'internet, comme un fichier ZIP qui approxime plutôt qu'il ne stocke parfaitement l'information.</p>
+        <p class="body-text">Après le pré-entraînement, on obtient un <span class="highlight">modèle de base</span> — un moteur d'autocomplétion sophistiqué. Ce n'est pas un assistant. Il ne répond pas aux questions. Il <em>continue des séquences de tokens</em> selon ce qu'il a modélisé dans la base de données issue internet.</p>
+        <p class="body-text">Donnez-lui une phrase Wikipedia et il la complétera à partir de ses modélisations. Demandez-lui « Combien font 2+2 ? » et il pourrait vous donner une page de manuel de maths, une feuille de réponses, ou partir sur une tangente — selon ce qui était statistiquement fréquent dans ses données d'entraînement.</p>
+        <p class="body-text">La connaissance du modèle de base réside dans ses <span class="highlight-a">milliards de paramètres</span> (405 Mds dans notre exemple initial) — une compression avec perte de l'internet, comme un fichier ZIP qui fait des approximations plutôt qu'il ne stocke parfaitement l'information.</p>
       </div>
       <div class="fade-up" style="animation-delay:.15s">
         <h3 class="sub-title" style="margin-bottom:14px">Comportements du modèle de base</h3>
@@ -603,12 +603,12 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
             <div class="example-prompt">Le Parti républicain a désigné Trump et [colistier] lors de l'élection 2024 contre...</div>
             <div class="example-hallucinated">→ ...Mike Pence, face à Hillary Clinton et Tim Kaine...</div>
             <div style="margin-top:4px" class="example-hallucinated">→ ...Ron DeSantis, contre Joe Biden et Kamala Harris...</div>
-            <div style="margin-top:8px;font-size:11px;color:var(--txt2)">↑ Coupure de connaissance → confabulation plausible</div>
+            <div style="margin-top:8px;font-size:11px;color:var(--txt2)">↑ Coupure de connaissance → fabulation plausible</div>
           </div>
         </div>
         <div class="insight-box">
           <strong>Apprentissage en contexte</strong>
-          Les modèles de base peuvent effectuer de la traduction, de la classification et des Q&amp;R via des prompts à quelques exemples — sans affinage. Le modèle infère la tâche depuis le pattern d'exemples dans sa fenêtre de contexte.
+          Les modèles de base peuvent effectuer de la traduction, de la classification et des Q&amp;R via des instructions à quelques exemples — sans affinage. Le modèle infère la tâche depuis la modélisation d'exemples de sa fenêtre de contexte.
         </div>
       </div>
     </div>
@@ -621,25 +621,25 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
     <div class="fade-up" style="margin-bottom:40px">
       <div class="chapter-badge">Chapitre 3 · Post-entraînement</div>
       <h2 class="section-title">Construire l'assistant</h2>
-      <p class="body-text" style="max-width:680px">Le modèle de base est un simulateur de tokens. Pour en faire un <em>assistant utile</em>, il faut le post-entraînement — une étape bien moins coûteuse mais tout aussi cruciale. C'est là que le modèle apprend les <span class="highlight">conversations</span>.</p>
+      <p class="body-text" style="max-width:680px">Le modèle de base est un simulateur de tokens. Pour en faire un <em>assistant utile</em>, il faut passer au post-entraînement — une étape bien moins coûteuse mais tout aussi cruciale. C'est là que le modèle apprend les <span class="highlight">conversations</span>.</p>
     </div>
     <div class="two-col">
       <div class="fade-up">
         <h3 class="sub-title">Affinage supervisé (SFT)</h3>
         <p class="body-text">Des annotateurs humains créent un jeu de données de conversations idéales, en suivant des instructions détaillées : être <span class="highlight">utile</span>, être <span class="highlight-a">honnête</span>, être <span class="highlight-g">inoffensif</span>. Le modèle est ensuite entraîné sur ces conversations — non pas de zéro, mais en continuant d'ajuster les poids pré-entraînés sur ces nouvelles données.</p>
-        <p class="body-text">Les jeux de données SFT modernes (comme UltraChat) comptent des millions de conversations — majoritairement synthétiques (générées par LLM), avec relecture humaine. Le modèle apprend par imitation : il adopte le comportement de l'assistant idéal reflété dans les données.</p>
+        <p class="body-text">Les jeux de données pour le "Réglage Fin Supervisé" ou "Affinage supervisé" (en anglais, Supervised Fine-Tuning - SFT) modernes (comme UltraChat) comptent des millions de conversations — majoritairement synthétiques (générées par LLM), avec relecture humaine. Le modèle apprend par imitation : il adopte le comportement de l'assistant idéal reflété dans les données.</p>
         <div class="convo-visual fade-in">
           <div class="convo-header">Exemple de conversation d'entraînement</div>
           <div class="convo-messages">
             <div class="msg msg-user"><div class="msg-label">Humain</div>Combien font 2 + 2 ?</div>
-            <div class="msg msg-assistant"><div class="msg-label">Assistant</div>2 + 2 = 4. Y a-t-il autre chose avec laquelle je peux vous aider ?</div>
+            <div class="msg msg-assistant"><div class="msg-label">Assistant</div>2 + 2 = 4. Y a-t-il d'autres choses sur lesquelles je peux vous aider ?</div>
             <div class="msg msg-user"><div class="msg-label">Humain</div>Et si c'était une multiplication à la place ?</div>
             <div class="msg msg-assistant"><div class="msg-label">Assistant</div>2 × 2 = 4 également — le même résultat ! En multiplication, 2 × 2 signifie additionner 2 à lui-même une fois, ce qui donne 4.</div>
           </div>
         </div>
         <div class="insight-box" style="margin-top:16px">
           <strong>À qui vous parlez vraiment</strong>
-          ChatGPT est une simulation statistique des annotateurs humains recrutés par OpenAI — des experts suivant des instructions d'annotation. Quand il répond à une question de code, il imite ce qu'un développeur-annotateur qualifié aurait écrit.
+          ChatGPT, Gemini, Le Chat, etc. sont des simulations statistiques des annotateurs humains recrutés par OpenAI, Google ou Mistral — des employés suivant des instructions d'annotation. Quand ils répondent à une question de code, ils imitent ce qu'un développeur-annotateur qualifié aurait écrit.
         </div>
       </div>
       <div class="fade-up" style="animation-delay:.15s">
@@ -653,22 +653,22 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 <span class="tok-text">2 + 2 = 4.</span>
 <span class="tok-special">&lt;|im_end|&gt;</span>
         </div>
-        <p class="body-text" style="margin-top:16px">Puis le RLHF affine davantage le comportement de l'assistant :</p>
+        <p class="body-text" style="margin-top:16px">Puis l'apprentissage par renforcement affine davantage le comportement de l'assistant :</p>
         <h3 class="sub-title">RLHF — Apprentissage par renforcement<br>à partir des retours humains</h3>
         <p class="body-text">Des évaluateurs humains classent plusieurs réponses du modèle. Un <span class="highlight">modèle de récompense</span> apprend à prédire les préférences humaines. Le modèle de langage est ensuite entraîné par apprentissage par renforcement pour générer des réponses mieux notées par ce modèle de récompense.</p>
         <div class="rlhf-row">
           <div class="rlhf-resp preferred">
-            <div class="rlhf-badge" style="color:var(--green)">✓ Préférée</div>
+            <div class="rlhf-badge" style="color:var(--green)">✓ Préféré</div>
             <div class="rlhf-text">Voici les 5 monuments incontournables de Paris : 1) La Tour Eiffel — emblématique structure en treillis de fer... 2) Le Louvre — plus grand musée d'art du monde...</div>
           </div>
           <div class="rlhf-resp rejected">
-            <div class="rlhf-badge" style="color:var(--red)">✗ Rejetée</div>
+            <div class="rlhf-badge" style="color:var(--red)">✗ Rejeté</div>
             <div class="rlhf-text">Paris possède de nombreux monuments. Vous devriez visiter la Tour Eiffel. Il y a aussi un musée appelé le Louvre. La cathédrale Notre-Dame est également là...</div>
           </div>
         </div>
         <div class="insight-box">
-          <strong>Pourquoi le RLHF est important</strong>
-          Le SFT enseigne au modèle <em>quoi</em> dire. Le RLHF lui apprend <em>comment</em> bien le dire — rendant les réponses plus utiles, mieux structurées, plus honnêtes et moins sujettes aux hallucinations.
+          <strong>Pourquoi l'apprentissage par renforcement (RLHF) est important</strong>
+          L'affinage supervisé (SFT) enseigne au modèle <em>quoi</em> dire. L'apprentissage par renforcement (RLHF) lui apprend <em>comment</em> bien l'écrire — rendant les réponses plus utiles, mieux structurées, plus honnêtes et moins sujettes aux hallucinations.
         </div>
       </div>
     </div>
@@ -679,7 +679,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 <section id="s-psychology" class="section" aria-label="Psychologie des LLM">
   <div class="section-inner">
     <div class="fade-up" style="margin-bottom:40px">
-      <div class="chapter-badge">Chapitre 4 · Psychologie des LLM</div>
+      <div class="chapter-badge">Chapitre 4 · "Psychologie" des LLM</div>
       <h2 class="section-title">Les particularités<br>cognitives des LLM</h2>
       <p class="body-text" style="max-width:680px">Comprendre <em>pourquoi</em> les LLM se comportent comme ils le font exige de penser à leur psychologie — les propriétés émergentes d'un entraînement à imiter statistiquement le texte humain.</p>
     </div>
@@ -687,7 +687,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="psych-card">
         <div class="psych-icon">🌀</div>
         <div class="psych-title">Hallucination</div>
-        <div class="psych-text">Les modèles confabulent avec assurance parce que les données d'entraînement contiennent toujours des réponses confiantes. « Qui est Orson Kovats ? » génère une biographie inventée, car dans la distribution d'entraînement, les questions « qui est X ? » sont toujours suivies de réponses confiantes — même pour des noms fictifs. Remède : ajouter des exemples « je ne sais pas » pour les questions que le modèle rate systématiquement.</div>
+        <div class="psych-text">Les modèles fabulent avec assurance parce que les données d'entraînement contiennent toujours des réponses confiantes. « Qui est Orson Kovats ? » génère une biographie inventée, car dans la distribution d'entraînement, les questions « qui est X ? » sont toujours suivies de réponses confiantes — même pour des noms fictifs. Remède : ajouter des exemples « je ne sais pas » pour les questions que le modèle rate systématiquement.</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">🧠</div>
@@ -701,18 +701,18 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       </div>
       <div class="psych-card">
         <div class="psych-icon">🪞</div>
-        <div class="psych-title">Pas de soi persistant</div>
-        <div class="psych-text">Chaque conversation repart de zéro — aucun souvenir des échanges précédents. Le modèle « s'allume », traite des tokens, puis s'éteint. Il n'a pas d'identité stable. Quand il dit « Je suis ChatGPT, créé par OpenAI », c'est simplement la réponse statistiquement la plus probable dans ses données d'entraînement — pas une véritable connaissance de soi.</div>
+        <div class="psych-title">Pas de persistance</div>
+        <div class="psych-text">Chaque conversation repart de zéro — aucun souvenir des échanges précédents sauf si la couche de mémorisation a été activée dans l'application utilisée. Le modèle « s'allume », traite des tokens, puis s'éteint. Il n'a pas d'identité stable. Quand il dit « Je suis ChatGPT, créé par OpenAI », c'est simplement la réponse statistiquement la plus probable dans ses données d'entraînement — pas une véritable connaissance de ce que l'application est réellement</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">📊</div>
-        <div class="psych-title">Tireur de tokens stochastique</div>
+        <div class="psych-title">Trieur de tokens stochastique</div>
         <div class="psych-text">Le modèle ne « décide » pas de ce qu'il va dire. Il calcule des distributions de probabilité et en échantillonne. Soumettez le même prompt 10 fois et obtenez 10 sorties différentes — toutes plausibles, toutes tirées de la même distribution apprise. La température contrôle l'amplitude de cet échantillonnage.</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">📚</div>
         <div class="psych-title">Coupure de connaissance</div>
-        <div class="psych-text">Les données d'entraînement ont une date. Le modèle ne sait genuinement pas ce qui s'est passé après. Posez-lui des questions sur des événements récents et il hallucine — non par malice, mais par le même mécanisme qui répond à toutes les questions : prédire la continuation la plus probable de la séquence de tokens.</div>
+        <div class="psych-text">Les données d'entraînement ont une date. Sans activer la couche de recherche internet, le modèle ignore ce qu'il s'est passé après. Posez-lui des questions sur des événements récents et il hallucine — non par malice, mais par le même mécanisme qui répond à toutes les questions : prédire la continuation la plus probable de la séquence de tokens.</div>
       </div>
     </div>
   </div>
@@ -722,8 +722,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 <section id="s-rag" class="section" aria-label="Génération augmentée par récupération">
   <div class="section-inner">
     <div class="fade-up" style="margin-bottom:44px">
-      <div class="chapter-badge" style="color:var(--amber)">LLM appliqués · RAG</div>
-      <h2 class="section-title">Génération augmentée<br>par récupération</h2>
+      <div class="chapter-badge" style="color:var(--amber)">LLM augmenté · RAG</div>
+      <h2 class="section-title">RAG - Génération augmentée<br>par récupération</h2>
       <p class="body-text" style="max-width:680px">Les LLM ont une coupure de connaissance et une fenêtre de contexte finie. Le RAG résout ce problème en <em>encodant</em> vos documents dans une base vectorielle, en récupérant les passages sémantiquement les plus pertinents au moment de la requête, et en les injectant dans le contexte — orientant la distribution de prédiction du modèle vers des faits ancrés et à jour plutôt que vers des données d'entraînement mémorisées.</p>
     </div>
 
@@ -731,7 +731,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div>
         <div class="rag-step-group">
           <div class="rag-step-num">Étape 01 — Encoder tout</div>
-          <p class="body-text" style="margin-bottom:0">Chaque document est converti en vecteur dense (~1 536 nombres) par un modèle d'embedding. Les textes sémantiquement proches se retrouvent voisins dans cet espace de haute dimension — sans correspondance par mots-clés.</p>
+          <p class="body-text" style="margin-bottom:0">Chaque document est converti en vecteur dense (~1 536 nombres) par un modèle d'intégration ("embedding"). Les textes sémantiquement proches se retrouvent voisins dans cet espace de haute dimension — sans correspondance par mots-clés.</p>
         </div>
         <canvas id="rag-canvas" width="500" height="200" aria-label="Projection 2D de l'espace d'embedding des documents" role="img" style="width:100%;height:200px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin:10px 0 24px;display:block"></canvas>
         <div class="rag-step-group">
@@ -740,7 +740,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         </div>
         <div class="rag-step-group" style="margin-top:20px">
           <div class="rag-step-num">Étape 03 — Injecter et générer</div>
-          <p class="body-text" style="margin-bottom:0">Les passages récupérés sont ajoutés en tête du prompt avant que le LLM ne voie la question. Le modèle génère à partir des faits injectés plutôt qu'en s'appuyant sur les données d'entraînement mémorisées — réduisant drastiquement les hallucinations sur les tâches intensives en connaissances.</p>
+          <p class="body-text" style="margin-bottom:0">Les passages récupérés sont ajoutés en tête de l'instruction avant que le LLM ne la traite. Le modèle génère à partir des faits injectés plutôt qu'en s'appuyant sur les données d'entraînement mémorisées — réduisant drastiquement les hallucinations sur les tâches s'appuyant sur des connaissances.</p>
         </div>
       </div>
 
@@ -752,7 +752,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="rag-flow-connector"></div>
         <div class="rag-flow-step" id="rag-s2" role="listitem">
           <div class="rag-flow-label">2 · Modèle d'embedding</div>
-          <div class="rag-flow-content">Texte → <span style="color:var(--amber);font-family:var(--dm);font-size:11px">[0.23, −0.87, 0.41, ...]</span> <span style="color:var(--txt2);font-size:12px">~1 536 flottants</span></div>
+          <div class="rag-flow-content">Texte → <span style="color:var(--amber);font-family:var(--dm);font-size:11px">[0.23, −0.87, 0.41, ...]</span> <span style="color:var(--txt2);font-size:12px">~1 536 vecteurs flottants</span></div>
         </div>
         <div class="rag-flow-connector"></div>
         <div class="rag-flow-step" id="rag-s3" role="listitem">
@@ -812,7 +812,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="rag-compare">
         <div class="rag-answer-box no-rag">
           <div class="rag-answer-lbl">✕ Sans RAG</div>
-          <div class="rag-answer-text">« Je ne dispose pas d'informations fiables sur une colonie nommée Base Arès. À la date de ma coupure de connaissance, aucune telle colonie martienne n'avait été établie... »</div>
+          <div class="rag-answer-text">« Je ne dispose pas d'informations fiables sur une colonie nommée Base Arès. À la date de ma coupure de connaissance, aucune colonie martienne n'avait été établie... »</div>
           <span class="rag-answer-badge" style="color:var(--red);background:var(--red-d)">Hallucination / Refus</span>
         </div>
         <div class="rag-answer-box with-rag">
@@ -829,17 +829,17 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 <section id="s-summary" class="section" aria-label="Récapitulatif du pipeline complet">
   <div class="section-inner">
     <div class="fade-up" style="margin-bottom:48px;text-align:center">
-      <div class="chapter-badge" style="justify-content:center">Pipeline complet</div>
+      <div class="chapter-badge" style="justify-content:center">Toutes les étapes</div>
       <h2 class="section-title" style="text-align:center">Du texte brut<br>à l'assistant</h2>
-      <p class="body-text" style="max-width:560px;margin:0 auto">Le parcours complet depuis le crawl web brut jusqu'au ChatGPT avec lequel vous interagissez — en deux grandes étapes, des mois de calcul, et des milliards de paramètres.</p>
+      <p class="body-text" style="max-width:560px;margin:0 auto">Le parcours complet depuis le crawl web brut jusqu'au chatbot avec lequel vous interagissez — en deux grandes étapes, des mois de calcul, et des milliards de paramètres.</p>
     </div>
     <div class="pipeline-full" id="pipeline-full">
       <div class="pipeline-stage" style="transition-delay:.0s">
         <div class="ps-num">01</div>
         <div class="ps-content" style="border-left:3px solid var(--cyan)">
           <div class="ps-title" style="color:var(--cyan)">Collecte des données</div>
-          <div class="ps-desc">Common Crawl + autres sources → filtrage URL → extraction du texte → filtrage linguistique → déduplication → suppression DCP → 44 To de texte curé (FineWeb, etc.)</div>
-          <div class="ps-tags"><span class="tag tag-c">Common Crawl</span><span class="tag tag-c">FineWeb</span><span class="tag tag-c">44 To</span><span class="tag tag-c">15T tokens</span></div>
+          <div class="ps-desc">Common Crawl + autres sources → filtrage URL → extraction du texte → filtrage linguistique → déduplication → suppression des données personnelles → 44 To de texte choisi et organisé (FineWeb, etc.)</div>
+          <div class="ps-tags"><span class="tag tag-c">Common Crawl</span><span class="tag tag-c">FineWeb</span><span class="tag tag-c">44 To</span><span class="tag tag-c">15 000 Mds de tokens</span></div>
         </div>
       </div>
       <div class="pipeline-connector"></div>
@@ -848,7 +848,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="ps-content" style="border-left:3px solid var(--amber)">
           <div class="ps-title" style="color:var(--amber)">Tokenisation</div>
           <div class="ps-desc">Texte → octets UTF-8 → Byte Pair Encoding → séquence de 15 000 milliards de tokens. Chaque token est un sous-mot avec un identifiant entier. Vocabulaire GPT-4 : 100 277 tokens.</div>
-          <div class="ps-tags"><span class="tag tag-a">BPE</span><span class="tag tag-a">100K vocab</span><span class="tag tag-a">Sous-mots</span></div>
+          <div class="ps-tags"><span class="tag tag-a">BPE</span><span class="tag tag-a">100 000 tokens de vocabulaire</span><span class="tag tag-a">Sous-mots</span></div>
         </div>
       </div>
       <div class="pipeline-connector"></div>
@@ -857,7 +857,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="ps-content" style="border-left:3px solid var(--purple)">
           <div class="ps-title" style="color:var(--purple)">Pré-entraînement</div>
           <div class="ps-desc">Réseau de neurones Transformer entraîné à prédire le prochain token. Des milliards de paramètres ajustés par descente de gradient. Des mois de calcul sur des milliers de GPU. La perte passe de ~11 à ~2,4.</div>
-          <div class="ps-tags"><span class="tag tag-p">Transformer</span><span class="tag tag-p">405B paramètres</span><span class="tag tag-p">$millions de calcul</span><span class="tag tag-p">3 mois</span></div>
+          <div class="ps-tags"><span class="tag tag-p">Transformer</span><span class="tag tag-p">405B paramètres</span><span class="tag tag-p">Millions de $ de calcul</span><span class="tag tag-p">3 mois</span></div>
         </div>
       </div>
       <div class="pipeline-connector"></div>
@@ -874,8 +874,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="ps-num">05</div>
         <div class="ps-content" style="border-left:3px solid var(--green)">
           <div class="ps-title" style="color:var(--green)">Affinage supervisé (SFT)</div>
-          <div class="ps-desc">Le modèle de base est ré-entraîné sur des conversations annotées par des humains. Les annotateurs rédigent des réponses idéales selon les consignes de l'entreprise : utile, honnête, inoffensif. Jeux de données modernes : des millions de conversations synthétiques + curées humainement. Durée : quelques heures (pas des mois).</div>
-          <div class="ps-tags"><span class="tag tag-g">Annotateurs humains</span><span class="tag tag-g">InstructGPT</span><span class="tag tag-g">UltraChat</span><span class="tag tag-g">~3 heures</span></div>
+          <div class="ps-desc">Le modèle de base est ré-entraîné sur des conversations annotées par des humains. Les annotateurs rédigent des réponses idéales selon les consignes de l'entreprise : utile, honnête, inoffensif. Jeux de données modernes : des millions de conversations synthétiques + traitées humainement. Durée : quelques heures (pas des mois).</div>
+          <div class="ps-tags"><span class="tag tag-g">Annotateurs humains</span><span class="tag tag-g">InstructGPT</span><span class="tag tag-g">UltraChat</span><span class="tag tag-g">~quelques heures</span></div>
         </div>
       </div>
       <div class="pipeline-connector"></div>
@@ -883,7 +883,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="ps-num">06</div>
         <div class="ps-content" style="border-left:3px solid var(--red)">
           <div class="ps-title" style="color:var(--red)">RLHF</div>
-          <div class="ps-desc">Des évaluateurs humains classent les sorties du modèle. Un modèle de récompense apprend ces préférences. Le modèle de langage est optimisé par apprentissage par renforcement pour obtenir de meilleures notes — produisant des réponses plus utiles, mieux structurées et plus honnêtes.</div>
+          <div class="ps-desc">Des évaluateurs humains classent les sorties du modèle. Un modèle de récompense apprend ces préférences. Le modèle de langage est optimisé par apprentissage par renforcement pour obtenir de meilleures notes — produisant des réponses plus utiles, mieux structurées et plus ancrées</div>
           <div class="ps-tags"><span class="tag tag-g" style="color:var(--red);border-color:rgba(255,82,82,.25);background:var(--red-d)">Modèle de récompense</span><span class="tag tag-g" style="color:var(--red);border-color:rgba(255,82,82,.25);background:var(--red-d)">PPO</span><span class="tag tag-g" style="color:var(--red);border-color:rgba(255,82,82,.25);background:var(--red-d)">Préférences humaines</span></div>
         </div>
       </div>
@@ -891,8 +891,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="pipeline-stage" style="transition-delay:.6s">
         <div class="ps-num">07</div>
         <div class="ps-content" style="border-left:3px solid var(--cyan);background:linear-gradient(135deg,rgba(0,229,255,0.06),transparent)">
-          <div class="ps-title" style="color:var(--cyan)">🤖 ChatGPT / Claude / Gemini</div>
-          <div class="ps-desc">L'assistant final. Une simulation statistique d'annotateurs humains experts, appuyée par une vaste représentation compressée d'internet. Pas de magie — mais une ingénierie remarquable à une échelle colossale.</div>
+          <div class="ps-title" style="color:var(--cyan)">🤖 ChatGPT / Claude / Gemini / Le Chat ...</div>
+          <div class="ps-desc">L'assistant final. Une simulation statistique d'annotateurs humains, appuyée par une vaste représentation compressée d'internet. Pas de magie — mais une ingénierie remarquable à une échelle colossale.</div>
           <div class="ps-tags"><span class="tag tag-c">Conversationnel</span><span class="tag tag-c">Utile · Honnête · Inoffensif</span><span class="tag tag-c">Utilisation d'outils</span></div>
         </div>
       </div>
