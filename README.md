@@ -1,4 +1,4 @@
-# Comment fonctionnent les LLM — Une exploration visuelle
+# Comment fonctionnent les LLM — une exploration visuelle
 
 **🌐 [Voir la page en ligne](https://uneiaparjour.github.io/how-llms-work/)**
 
