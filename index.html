@@ -99,8 +99,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 #hero-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0.45}
 .hero-content{position:relative;z-index:1;padding:168px 80px 80px 80px;width:100%}
 .hero-grid{display:grid;grid-template-columns:3fr 2fr;gap:80px;align-items:start;margin-top:32px}
-.hero-right{display:flex;flex-direction:column;justify-content:center}
-.hero-right .typewriter-wrap{max-width:none;margin-bottom:0;flex:1}
+.hero-right{display:flex;flex-direction:column}
+.hero-right .typewriter-wrap{max-width:none;margin-bottom:0}
 .hero-sub{font-size:17px;color:var(--txt);margin-bottom:36px;line-height:1.75;font-family:var(--db)}
 .stats-caveat{font-family:var(--db);font-size:12px;font-style:italic;color:var(--txt2);margin-top:10px;margin-bottom:32px;line-height:1.6}
 .hero-stats{display:flex;gap:0;flex-wrap:wrap;margin-bottom:48px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -285,9 +285,10 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 .section-divider{height:1px;background:var(--border);max-width:1280px;margin:0 auto}
 
 /* ── Attribution ── */
-.attribution-box{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;font-family:var(--db);font-size:13px;color:var(--txt2);background:var(--card);border:1px solid var(--border);border-left:3px solid var(--border);padding:10px 16px;border-radius:2px;margin-bottom:28px;line-height:1.6}
+.attribution-box{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;font-family:var(--db);font-size:12px;color:var(--txt2);background:var(--card);border:1px solid var(--border);border-left:3px solid var(--border);padding:10px 16px;border-radius:2px;margin-bottom:28px;line-height:1.6}
+.attribution-box .body-text{font-size:12px;line-height:1.7}
 .attr-badge{font-family:var(--ds);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--txt2);border:1px solid var(--border);padding:2px 8px;border-radius:1px;white-space:nowrap;flex-shrink:0}
-.attr-link{color:var(--accent);font-family:var(--dm);font-size:12px;text-decoration:none;border-bottom:1px solid rgba(192,57,43,0.3);padding-bottom:1px;transition:.2s}
+.attr-link{color:var(--accent);font-size:12px;text-decoration:none;border-bottom:1px solid rgba(192,57,43,0.3);padding-bottom:1px;transition:.2s}
 .attr-link:hover{border-bottom-color:var(--accent)}
 
 .rag-two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-bottom:48px}
@@ -306,8 +307,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 .rag-doc-card.rag-retrieved{border-left:3px solid var(--amber);background:rgba(138,94,26,0.04);box-shadow:0 2px 8px rgba(138,94,26,0.08)}
 .rag-doc-num{font-family:var(--ds);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);margin-bottom:4px;transition:.3s}
 .rag-doc-card.rag-retrieved .rag-doc-num{color:var(--amber)}
-.rag-ctx-box{background:rgba(138,94,26,0.04);border:1px solid rgba(138,94,26,0.2);border-left:3px solid var(--amber);padding:14px 16px;font-family:var(--dm);font-size:12px;margin-bottom:20px;transition:opacity .5s;opacity:0}
-.rag-ctx-box.rag-visible{opacity:1}
+.rag-ctx-box{background:rgba(138,94,26,0.04);border:1px solid rgba(138,94,26,0.2);border-left:3px solid var(--amber);padding:14px 16px;font-family:var(--dm);font-size:12px;margin-bottom:20px;display:none}
+.rag-ctx-box.rag-visible{display:block}
 .rag-ctx-title{font-size:10px;color:var(--amber);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px;font-family:var(--ds);font-weight:700}
 .rag-ctx-line{color:var(--txt);padding:3px 0;border-bottom:1px solid var(--border);margin-bottom:2px;font-size:11px}
 .rag-ctx-line.ctx-injected{color:var(--amber)}
@@ -343,7 +344,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <button class="tnav-btn" data-section="s-posttraining">Post-entraînement</button>
       <button class="tnav-btn" data-section="s-psychology">Psychologie</button>
       <button class="tnav-btn" data-section="s-rag">RAG</button>
-      <button class="tnav-btn" data-section="s-summary">Pipeline</button>
+      <button class="tnav-btn" data-section="s-summary">Tout le chemin</button>
     </div>
     <a href="v1.html" class="top-nav-v1">← v1</a>
   </div>
@@ -354,15 +355,15 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
   <canvas id="hero-canvas" role="img" aria-label="Visualisation animée d'un réseau de neurones" aria-hidden="true"></canvas>
   <div class="hero-content" id="main-content">
     <div class="chapter-badge" aria-hidden="true">Une exploration visuelle approfondie</div>
+    <h1 class="hero-title">Comment les LLM<br><span>fonctionnent</span> réellement</h1>
+    <p class="hero-sub">Un parcours complet sur la construction des grands modèles de langage — du texte brut d'internet à un assistant conversationnel. Basé sur l'analyse technique d'<a href="https://fr.wikipedia.org/wiki/Andrej_Karpathy" target="_blank" rel="noopener" class="attr-link">Andrej Karpathy <span aria-hidden="true">↗</span></a>.</p>
     <div class="hero-grid">
       <div class="hero-left">
-        <h1 class="hero-title">Comment les LLM<br><span>fonctionnent</span> réellement</h1>
-        <p class="hero-sub">Un parcours complet sur la construction des grands modèles de langage — du texte brut d'internet à un assistant conversationnel. Basé sur l'analyse technique d'Andrej Karpathy.</p>
         <div class="attribution-box" role="note" aria-label="Crédits et origine">
           <p class="body-text" style="max-width:560px;margin:0 auto;color:var(--txt2)">
           <span class="attr-badge">Traduction</span>
-          Traduction et adaptation en français de la création originale de <a href="https://github.com/ynarwal/how-llms-work" target="_blank" rel="noopener" class="attr-link">ynarwal <span aria-hidden="true">↗</span></a>, avec l'accord de son auteur, par <strong>Bertrand Formet</strong> pour <a href="https://uneiaparjour.fr" target="_blank" rel="noopener" class="attr-link">uneIAparjour.fr <span aria-hidden="true">↗</span></a>, produite avec l'aide de <strong>Claude</strong> (Anthropic).<br>
-          Construit à partir de la conférence d'Andrej Karpathy <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener" style="color:var(--accent)">« Intro to Large Language Models »</a> — tous les faits, chiffres et cadres conceptuels en sont issus. Visualisations interactives construites avec l'aide de l'IA. Le point essentiel à retenir : chaque mot généré est un échantillon probabiliste — un tirage au sort biaisé, à l'échelle de 100 000 possibilités, répété des milliards de fois.<br>
+          Traduction et adaptation en français de la création originale de <a href="https://github.com/ynarwal/how-llms-work" target="_blank" rel="noopener" class="attr-link">ynarwal <span aria-hidden="true">↗</span></a>, avec l'accord de son auteur, par <strong>Bertrand Formet</strong> pour <a href="https://uneiaparjour.fr" target="_blank" rel="noopener" class="attr-link">uneIAparjour.fr <span aria-hidden="true">↗</span></a>, produite avec l'aide de <strong>Claude</strong> (Anthropic).<br><br>
+          Construit à partir de la conférence d'<a href="https://fr.wikipedia.org/wiki/Andrej_Karpathy" target="_blank" rel="noopener" class="attr-link">Andrej Karpathy <span aria-hidden="true">↗</span></a> <a href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank" rel="noopener" class="attr-link">« Intro to Large Language Models » <span aria-hidden="true">↗</span></a> — les faits, chiffres et cadres conceptuels en sont issus. Visualisations interactives construites avec l'aide de l'IA.<br><br>Le point essentiel à retenir : chaque mot généré est un échantillon probabiliste — un tirage au sort biaisé, à l'échelle de 100 000 possibilités, répété des milliards de fois.<br>
           <a href="transcript.txt" target="_blank" rel="noopener" class="attr-link">Transcription complète de la conférence</a></p>
         </div>
         
@@ -377,7 +378,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       </div>
       <div class="hero-right">
         <div class="typewriter-wrap" aria-label="Exemple de conversation avec un LLM">
-          <div class="tw-label" aria-hidden="true">Réponse LLM en direct</div>
+          <div class="tw-label" aria-hidden="true">Simulation de réponse LLM</div>
           <div class="tw-prompt">Utilisateur : Qu'y a-t-il derrière cette zone de texte ?</div>
           <div class="tw-response" id="tw-response" aria-live="polite" aria-atomic="true"><span class="tw-cursor" aria-hidden="true"></span></div>
         </div>
@@ -388,7 +389,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 
 <!-- ━━━━━━━━ SECTION 2 : COLLECTE DES DONNÉES ━━━━━━━━ -->
 <section id="s-data" class="section" aria-label="Collecte des données">
-  <div class="section-inner two-col">
+  <div class="section-inner two-col" style="align-items:start">
     <div class="col-text fade-up">
       <div class="chapter-badge" aria-hidden="true">Chapitre 1 · Pré-entraînement · Étape 1</div>
       <h2 class="section-title">Télécharger<br>l'internet</h2>
@@ -396,7 +397,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <p class="body-text">L'objectif : une <em>très grande quantité</em> de documents <em>de haute qualité</em> et <em>diversifiés</em>. Après un filtrage intensif, on obtient environ <span class="highlight-a">44 téraoctets</span> — soit l'équivalent d'une grosse dizaine de disques durs grand public — représentant environ 15 000 milliards de tokens.</p>
       <div class="insight-box">
         <strong>Point clé</strong>
-        La qualité et la diversité des données d'entraînement ont plus d'impact sur le modèle final que presque tout le reste. Des données médiocres produisent des résultats médiocres — mais à l'échelle du trillion de tokens.
+        La qualité et la diversité des données d'entraînement ont plus d'impact sur le modèle final que presque tout le reste. Des données médiocres produisent des résultats médiocres — mais à l'échelle de milliers de milliards de tokens.
       </div>
     </div>
     <div class="col-text fade-up" style="animation-delay:.15s">
@@ -457,7 +458,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="chapter-badge">Chapitre 1 · Pré-entraînement · Étape 2</div>
         <h2 class="section-title">Tokenisation</h2>
         <p class="body-text">Les réseaux de neurones ne peuvent pas traiter du texte brut — ils ont besoin de nombres. La solution est la <span class="highlight">tokenisation</span> : découper le texte en « tokens » (sous-mots) et attribuer à chacun un identifiant numérique.</p>
-        <p class="body-text">GPT-4 utilise un vocabulaire de <span class="highlight">100 277 tokens</span>, construit via l'algorithme <span class="highlight-a">Byte Pair Encoding (BPE)</span>. Le BPE part des octets individuels (256 symboles), puis fusionne itérativement les paires adjacentes les plus fréquentes — compressant la longueur des séquences tout en élargissant le vocabulaire.</p>
+        <p class="body-text">GPT-4 utilise un vocabulaire de <span class="highlight">100 277 tokens</span>, construit via l'algorithme <span class="highlight-a">Byte Pair Encoding (BPE)</span>. Le BPE part des octets individuels — l'équivalent numérique de chaque caractère — puis regroupe progressivement les combinaisons les plus fréquentes jusqu'à former des morceaux de mots reconnaissables.</p>
         <div class="insight-box">
           <strong>Pourquoi ne pas utiliser des mots entiers ?</strong>
           Les mots ont des variantes infinies. « courir », « courant », « coureur » seraient 3 entrées séparées. Les sous-mots partagent des racines : « cour » + « ir », « cour » + « eur ». Ce système permet aussi de gérer les néologismes, les fautes de frappe et plusieurs langues simultanément.
@@ -490,7 +491,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <p class="body-text">La <span class="highlight">perte</span> — un seul nombre mesurant l'erreur de prédiction — diminue régulièrement à mesure que le modèle apprend les modèles statistiques du langage humain.</p>
         <div class="insight-box">
           <strong>Ordre de grandeur</strong>
-          GPT-2 (2019) : 1,6 Md de paramètres, 100 Mds de tokens, ~40 000 $ de coût d'entraînement. <br>
+          GPT-2 (2019) : 1,5 Md de paramètres, 100 Mds de tokens, ~40 000 $ de coût d'entraînement. <br>
           Aujourd'hui : même qualité pour ~100 $. Llama 3 : 405 Mds de paramètres, 15 000 Mds de tokens. Modèles de langage de pointe actuels : des centaines de milliards de paramètres, des milliers de milliards de tokens.
         </div>
       </div>
@@ -499,7 +500,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <svg id="transformer-svg" viewBox="0 0 360 340" width="100%" style="background:var(--card);border:1px solid var(--border);border-radius:10px;display:block;margin-bottom:16px" role="img" aria-label="Diagramme de l'architecture Transformer montrant le flux de données depuis les tokens d'entrée à travers les couches d'intégration (embedding), d'attention et d'anticipation jusqu'aux valeurs de sortie"><title>Architecture Transformer</title></svg>
         <div class="insight-box">
           <strong>Qu'est-ce qu'un embedding ?</strong>
-          Chaque identifiant de token correspond à un vecteur d'environ 1 000 à 4 000 nombres appelé "<em>embedding</em>". Imaginez-le comme un point avec des coordonnées dans l'espace sémantique — positionné aléatoirement, puis façonné par l'entraînement. Les <em>couches d'attention</em> intègrent ensuite le contexte des tokens environnants, si bien qu'en profondeur dans le réseau, « lettre » dans « une lettre de l'alphabet » et « lettre » dans « la lettre déposée par la factrice » portent des représentations totalement différentes. La polysémie est résolue par le contexte, pas par le stockage de plusieurs sens par token.
+          Chaque identifiant de token correspond à un vecteur d'environ 1 000 à 4 000 nombres appelé "<em>embedding</em>". Imaginez-le comme un point dans un espace abstrait à des milliers de dimensions — placé au hasard, puis déplacé progressivement par l'entraînement jusqu'à refléter son sens. Les <em>couches d'attention</em> intègrent ensuite le contexte des tokens environnants, si bien qu'en profondeur dans le réseau, « lettre » dans « une lettre de l'alphabet » et « lettre » dans « la lettre déposée par la factrice » portent des représentations totalement différentes. Le mot « lettre » n'a pas un sens fixe — c'est le contexte qui lui donne son sens à chaque fois.
         </div>
       </div>
     </div>
@@ -518,7 +519,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
             <canvas id="loss-canvas"></canvas>
           </div>
           <div style="display:flex;gap:20px;margin-top:14px">
-            <div><div class="loss-val" id="current-loss">4.8</div><div class="loss-step">Perte de véracité croisée</div></div>
+            <div><div class="loss-val" id="current-loss">4.8</div><div class="loss-step">Score d'erreur de prédiction</div></div>
             <div><div class="loss-val" id="current-step" style="color:var(--amber)">500</div><div class="loss-step">Étape d'entraînement</div></div>
           </div>
         </div>
@@ -544,7 +545,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       <div class="chapter-badge">Chapitre 1 · Pré-entraînement · Étape 4</div>
       <h2 class="section-title">Inférence &<br>échantillonnage</h2>
       <p class="body-text">Une fois entraîné, le réseau génère du texte de manière <em>autoregressive</em> : alimenter une séquence de tokens → obtenir une <span class="highlight">distribution de probabilité</span> sur les 100 000 tokens possibles suivants → en échantillonner un → l'ajouter → recommencer.</p>
-      <p class="body-text">Ce processus est <span class="highlight-a">stochastique</span> — la même instruction génère des sorties différentes à chaque fois, car on tire au sort selon des probabilités biaisées. Les tokens plus probables ont plus de chances d'être choisis, sans garantie.</p>
+      <p class="body-text">Ce processus est <span class="highlight-a">aléatoire</span> — la même instruction génère des sorties différentes à chaque fois, car on tire au sort selon des probabilités biaisées. Les tokens plus probables ont plus de chances d'être choisis, sans garantie.</p>
       <p class="body-text">La <span class="highlight">température</span> contrôle l'aléatoire. Température basse (0,1) → le modèle choisit toujours le token le plus probable. Haute (2,0) → chaos uniforme. La zone idéale pour un texte cohérent mais créatif est située entre 0,7 et 1,0.</p>
       <div class="insight-box">
         <strong>Point essentiel</strong>
@@ -576,7 +577,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 <!-- ━━━━━━━━ SECTION 6 : MODÈLE DE BASE ━━━━━━━━ -->
 <section id="s-basemodel" class="section" aria-label="Comportement du modèle de base">
   <div class="section-inner">
-    <div class="two-col">
+    <div class="two-col" style="align-items:start">
       <div class="fade-up">
         <div class="chapter-badge">Chapitre 2 · Le modèle de base</div>
         <h2 class="section-title">Le simulateur<br>d'Internet</h2>
@@ -598,7 +599,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
           <div class="example-content">
             <div class="example-prompt">Les zèbres (/zɛbʁ/) sont des équidés africains au pelage distinctif...</div>
             <div class="example-completion">...rayé noir et blanc. Il existe trois espèces vivantes : le zèbre de Grévy, le zèbre des plaines et le zèbre de montagne...</div>
-            <div style="margin-top:8px;font-size:11px;color:var(--txt2)">↑ Rappel verbatim de Wikipedia depuis les poids</div>
+            <div style="margin-top:8px;font-size:11px;color:var(--txt2)">↑ Texte restitué mot pour mot depuis la mémoire du modèle</div>
           </div>
         </div>
         <div class="example-card">
@@ -612,7 +613,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         </div>
         <div class="insight-box">
           <strong>Apprentissage en contexte</strong>
-          Les modèles de base peuvent effectuer de la traduction, de la classification et des Q&amp;R via des instructions à quelques exemples — sans affinage. Le modèle infère la tâche depuis la modélisation d'exemples de sa fenêtre de contexte.
+          Les modèles de base peuvent traduire, classer ou répondre à des questions sans entraînement spécifique — il suffit de donner quelques exemples dans le texte. Le modèle comprend la tâche à partir de ces exemples et continue dans le même esprit.
         </div>
       </div>
     </div>
@@ -648,7 +649,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       </div>
       <div class="fade-up" style="animation-delay:.15s">
         <h3 class="sub-title" style="margin-bottom:14px">Format des tokens de conversation</h3>
-        <p class="body-text">Chaque conversation doit être encodée comme une <em>séquence de tokens plate</em>. Des tokens spéciaux en marquent la structure :</p>
+        <p class="body-text">Pour le modèle, une conversation n'est qu'une longue liste de mots découpés : des séparateurs indiquent où commence chaque message et qui l'a écrit.</p>
         <div class="token-format">
 <span class="tok-special">&lt;|im_start|&gt;</span><span class="tok-role">user</span><span class="tok-special">&lt;|im_sep|&gt;</span>
 <span class="tok-text">Combien font 2 + 2 ?</span>
@@ -684,19 +685,19 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
   <div class="section-inner">
     <div class="fade-up" style="margin-bottom:40px">
       <div class="chapter-badge">Chapitre 4 · "Psychologie" des LLM</div>
-      <h2 class="section-title">Les particularités<br>cognitives des LLM</h2>
-      <p class="body-text" style="max-width:680px">Comprendre <em>pourquoi</em> les LLM se comportent comme ils le font exige de penser à leur psychologie — les propriétés émergentes d'un entraînement à imiter statistiquement le texte humain.</p>
+      <h2 class="section-title">Les comportements<br>des LLM expliqués</h2>
+      <p class="body-text" style="max-width:680px">Comprendre <em>pourquoi</em> les LLM se comportent comme ils le font exige de penser à leur psychologie — des comportements qui apparaissent naturellement quand on entraîne un modèle à imiter des milliards de textes humains.</p>
     </div>
     <div class="psych-grid fade-up">
       <div class="psych-card">
         <div class="psych-icon">🌀</div>
         <div class="psych-title">Hallucination</div>
-        <div class="psych-text">Les modèles fabulent avec assurance parce que les données d'entraînement contiennent toujours des réponses confiantes. « Qui est Orson Kovats ? » génère une biographie inventée, car dans la distribution d'entraînement, les questions « qui est X ? » sont toujours suivies de réponses confiantes — même pour des noms fictifs. Remède : ajouter des exemples « je ne sais pas » pour les questions que le modèle rate systématiquement.</div>
+        <div class="psych-text">Les modèles fabulent avec assurance parce que les données d'entraînement contiennent toujours des réponses confiantes. « Qui est Orson Kovats ? » génère une biographie inventée, car dans tous les textes vus à l'entraînement, les questions « qui est X ? » sont toujours suivies de réponses confiantes — même pour des noms fictifs. Remède : ajouter des exemples « je ne sais pas » pour les questions que le modèle rate systématiquement.</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">🧠</div>
         <div class="psych-title">Deux types de mémoire</div>
-        <div class="psych-text"><strong style="color:var(--purple)">Paramètres = mémoire à long terme.</strong> Tout ce que le modèle a appris à l'entraînement — vaste mais vague, comme quelque chose lu il y a des mois. <strong style="color:var(--amber)">Fenêtre de contexte = mémoire de travail.</strong> Le texte de la conversation en cours — précis et directement accessible. Collez toujours les informations importantes dans le contexte plutôt que d'espérer que le modèle « s'en souvienne ».</div>
+        <div class="psych-text"><strong style="color:var(--purple)">Paramètres = mémoire à long terme.</strong> Tout ce que le modèle a appris à l'entraînement — vaste mais vague, comme quelque chose lu il y a des mois. <strong style="color:var(--amber)">Fenêtre de contexte = mémoire de travail.</strong> Le texte de la conversation en cours — précis et directement accessible. La fenêtre de contexte, c'est tout ce que le modèle peut lire en une seule fois — comme un bureau de travail de taille limitée. Tout ce qui dépasse cette limite est invisible pour lui. Collez toujours les informations importantes dans le contexte plutôt que d'espérer que le modèle « s'en souvienne ».</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">🔧</div>
@@ -710,13 +711,18 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
       </div>
       <div class="psych-card">
         <div class="psych-icon">📊</div>
-        <div class="psych-title">Trieur de tokens stochastique</div>
+        <div class="psych-title">Un lanceur de dés très instruit</div>
         <div class="psych-text">Le modèle ne « décide » pas de ce qu'il va dire. Il calcule des distributions de probabilité et en échantillonne. Soumettez le même prompt 10 fois et obtenez 10 sorties différentes — toutes plausibles, toutes tirées de la même distribution apprise. La température contrôle l'amplitude de cet échantillonnage.</div>
       </div>
       <div class="psych-card">
         <div class="psych-icon">📚</div>
         <div class="psych-title">Coupure de connaissance</div>
         <div class="psych-text">Les données d'entraînement ont une date. Sans activer la couche de recherche internet, le modèle ignore ce qu'il s'est passé après. Posez-lui des questions sur des événements récents et il hallucine — non par malice, mais par le même mécanisme qui répond à toutes les questions : prédire la continuation la plus probable de la séquence de tokens.</div>
+      </div>
+      <div class="psych-card">
+        <div class="psych-icon">🪤</div>
+        <div class="psych-title">Sycophanie</div>
+        <div class="psych-text">Le RLHF entraîne aussi un effet pervers : le modèle apprend que les humains notent mieux les réponses flatteuses. Il peut donc valider vos idées fausses plutôt que de vous contredire — non par malice, mais parce que l'approbation était mieux notée pendant l'entraînement.</div>
       </div>
     </div>
   </div>
@@ -728,7 +734,8 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
     <div class="fade-up" style="margin-bottom:44px">
       <div class="chapter-badge" style="color:var(--amber)">LLM augmenté · RAG</div>
       <h2 class="section-title">RAG - Génération augmentée<br>par récupération</h2>
-      <p class="body-text" style="max-width:680px">Les LLM ont une coupure de connaissance et une fenêtre de contexte finie. Le RAG résout ce problème en <em>encodant</em> vos documents dans une base vectorielle, en récupérant les passages sémantiquement les plus pertinents au moment de la requête, et en les injectant dans le contexte — orientant la distribution de prédiction du modèle vers des faits ancrés et à jour plutôt que vers des données d'entraînement mémorisées.</p>
+      <p class="body-text" style="max-width:680px">Les LLM ont une date limite de connaissance et ne peuvent pas tout retenir. Le RAG résout ce problème : avant de répondre, on lui soumet les documents pertinents — il répond alors à partir de ces faits précis plutôt que de sa mémoire approximative.</p>
+      <p class="body-text" style="max-width:680px;margin-top:16px">Un modèle d'embedding traduit n'importe quel texte en une liste de nombres. Des textes au sens proche produisent des listes de nombres proches — c'est ce qui permet de chercher par sens plutôt que par mots-clés exacts.</p>
     </div>
 
     <div class="rag-two-col fade-up">
@@ -740,7 +747,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <canvas id="rag-canvas" width="500" height="200" aria-label="Projection 2D de l'espace d'embedding des documents" role="img" style="width:100%;height:200px;background:var(--card);border:1px solid var(--border);border-radius:10px;margin:10px 0 24px;display:block"></canvas>
         <div class="rag-step-group">
           <div class="rag-step-num">Étape 02 — Encoder la requête et chercher</div>
-          <p class="body-text" style="margin-bottom:0">La question de l'utilisateur est encodée de la même façon. La similarité cosinus trouve les vecteurs de documents les plus proches — les passages sémantiquement les plus liés à la requête — généralement les 2 à 5 premiers.</p>
+          <p class="body-text" style="margin-bottom:0">La question de l'utilisateur est encodée de la même façon. Un calcul mathématique mesure la proximité de sens entre la question et chaque document — et retient les 2 à 5 plus proches.</p>
         </div>
         <div class="rag-step-group" style="margin-top:20px">
           <div class="rag-step-num">Étape 03 — Injecter et générer</div>
@@ -761,7 +768,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="rag-flow-connector"></div>
         <div class="rag-flow-step" id="rag-s3" role="listitem">
           <div class="rag-flow-label">3 · Base vectorielle — Recherche cosinus</div>
-          <div class="rag-flow-content">Trouver les k plus proches voisins dans l'espace d'embedding</div>
+          <div class="rag-flow-content">Trouver les documents dont le sens est le plus proche de la question</div>
         </div>
         <div class="rag-flow-connector"></div>
         <div class="rag-flow-step" id="rag-s4" role="listitem">
@@ -798,7 +805,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         </div>
       </div>
 
-      <div class="rag-step-num" style="margin-bottom:10px">Base de connaissances — 4 documents</div>
+      <h3 class="sub-title" style="color:var(--amber);margin-bottom:14px">Base de connaissances</h3>
       <div class="rag-docs">
         <div class="rag-doc-card" id="rdoc-0"><div class="rag-doc-num">DOC 1</div>La colonie martienne Base Arès a été établie en 2031 près d'Hellas Planitia.</div>
         <div class="rag-doc-card" id="rdoc-1"><div class="rag-doc-num">DOC 2</div>La capitale administrative de la Base Arès est New Houston, qui abrite 312 colons.</div>
@@ -835,7 +842,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
     <div class="fade-up" style="margin-bottom:48px;text-align:center">
       <div class="chapter-badge" style="justify-content:center">Toutes les étapes</div>
       <h2 class="section-title" style="text-align:center">Du texte brut<br>à l'assistant</h2>
-      <p class="body-text" style="max-width:560px;margin:0 auto">Le parcours complet depuis le crawl web brut jusqu'au chatbot avec lequel vous interagissez — en deux grandes étapes, des mois de calcul, et des milliards de paramètres.</p>
+      <p class="body-text" style="max-width:560px;margin:0 auto">Le parcours complet depuis le texte brut d'internet jusqu'au chatbot avec lequel vous interagissez — sept étapes, des mois de calcul, et des milliards de paramètres.</p>
     </div>
     <div class="pipeline-full" id="pipeline-full">
       <div class="pipeline-stage" style="transition-delay:.0s">
@@ -878,7 +885,7 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
         <div class="ps-num">05</div>
         <div class="ps-content" style="border-left:3px solid var(--green)">
           <div class="ps-title" style="color:var(--green)">Affinage supervisé (SFT)</div>
-          <div class="ps-desc">Le modèle de base est ré-entraîné sur des conversations annotées par des humains. Les annotateurs rédigent des réponses idéales selon les consignes de l'entreprise : utile, honnête, inoffensif. Jeux de données modernes : des millions de conversations synthétiques + traitées humainement. Durée : quelques heures (pas des mois).</div>
+          <div class="ps-desc">Le modèle de base est ré-entraîné sur des conversations annotées par des humains. Les annotateurs rédigent des réponses idéales selon les consignes de l'entreprise : utile, honnête, inoffensif. Jeux de données modernes : des millions de conversations synthétiques + traitées humainement. Durée : quelques jours (contre plusieurs mois pour le pré-entraînement).</div>
           <div class="ps-tags"><span class="tag tag-g">Annotateurs humains</span><span class="tag tag-g">InstructGPT</span><span class="tag tag-g">UltraChat</span><span class="tag tag-g">~quelques heures</span></div>
         </div>
       </div>
@@ -904,6 +911,17 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
   </div>
 </section>
 
+<footer style="background:var(--surface);border-top:1px solid var(--border);padding:20px 72px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;font-family:var(--ds);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2)">
+  <span>Traduction & adaptation</span>
+  <span style="color:var(--border)">·</span>
+  <a href="https://github.com/ynarwal/how-llms-work" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--txt2)'">Original : ynarwal ↗</a>
+  <span style="color:var(--border)">·</span>
+  <span>Par <strong style="color:var(--txt)">Bertrand Formet</strong> pour <a href="https://uneiaparjour.fr" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--txt2)'">uneIAparjour.fr ↗</a></span>
+  <span style="color:var(--border)">·</span>
+  <span>D'après la conférence d'<a href="https://fr.wikipedia.org/wiki/Andrej_Karpathy" target="_blank" rel="noopener" style="color:var(--txt2);text-decoration:none" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--txt2)'">Andrej Karpathy ↗</a></span>
+  <span style="color:var(--border)">·</span>
+  <span>Construit avec Claude · Anthropic</span>
+</footer>
 
 <script>
 // ═══════════════════════════════════════════════
@@ -1044,10 +1062,10 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
     html += `<rect x="20" y="205" width="340" height="6" rx="0" fill="#EDE8DF"/>`;
     html += `<rect x="20" y="205" width="${barW}" height="6" rx="0" fill="url(#grad)"/>`;
     html += `<defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C0392B"/><stop offset="1" stop-color="#8A5E1A"/></linearGradient></defs>`;
-    html += `<text x="20" y="225" font-family="JetBrains Mono" font-size="9" fill="#7B6E66">LONGUEUR DE SÉQUENCE →</text>`;
-    html += `<text x="360" y="225" text-anchor="end" font-family="JetBrains Mono" font-size="9" fill="#7B6E66">← TAILLE DU VOCABULAIRE</text>`;
+    html += `<text x="20" y="222" font-family="JetBrains Mono" font-size="8" fill="#7B6E66">256 car. · lettre par lettre →</text>`;
+    html += `<text x="360" y="222" text-anchor="end" font-family="JetBrains Mono" font-size="8" fill="#7B6E66">← 100 277 tokens appris</text>`;
 
-    const annotations = ['12 symboles (caractères)','12 symboles (octets : 0–255)','7 tokens','3 tokens','2 tokens ✓'];
+    const annotations = ['12 caractères individuels','12 octets numériques (0–255)','7 tokens','3 tokens','2 tokens ✓'];
     html += `<text x="190" y="260" text-anchor="middle" font-family="Playfair Display" font-size="13" font-weight="700" fill="#1A1614">${annotations[step]}</text>`;
 
     svg.innerHTML = html;
@@ -1073,15 +1091,16 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 (function(){
   const svg = document.getElementById('transformer-svg');
   const layers = [
-    { label: 'Tokens d\'entrée', color: '#8A5E1A', y: 310 },
-    { label: 'Embedding de tokens', color: '#8A5E1A', y: 272 },
-    { label: 'Attention multi-têtes', color: '#C0392B', y: 220 },
-    { label: 'Feed Forward (MLP)', color: '#2C5282', y: 168 },
-    { label: 'Normalisation + Résidu', color: '#7B6E66', y: 130 },
-    { label: '× N Blocs Transformer', color: '#9B8E86', y: 95 },
-    { label: 'Logits de sortie', color: '#276749', y: 50 },
+    { main: "Prochain token probable",              tech: "distribution sur 100 277 tokens",   color: '#276749', y: 26  },
+    { main: "× N fois en profondeur",               tech: "blocs transformer empilés",         color: '#9B8E86', y: 74  },
+    { main: "Mémoire du chemin",                    tech: "normalisation + résidu",            color: '#7B6E66', y: 122 },
+    { main: "Traitement par position",              tech: "feed-forward / MLP",               color: '#2C5282', y: 170 },
+    { main: "Quels mots en influencent d'autres ?", tech: "attention multi-têtes",            color: '#C0392B', y: 218 },
+    { main: "Vecteurs de sens",                     tech: "embedding · ~1 000 dimensions",   color: '#8A5E1A', y: 266 },
+    { main: "Tokens (mots découpés)",               tech: "séquence d'IDs numériques",       color: '#8A5E1A', y: 314 },
   ];
 
+  const h = 28;
   let html = '';
   for (let i = 0; i < 8; i++) {
     html += `<line x1="${45*i}" y1="0" x2="${45*i}" y2="340" stroke="rgba(216,208,194,0.7)" stroke-width=".5"/>`;
@@ -1089,20 +1108,23 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
   }
 
   layers.forEach((layer, i) => {
-    const isMain = i >= 2 && i <= 3;
-    const h = isMain ? 32 : 26;
     const alpha = i === 5 ? '20' : '18';
-    html += `<rect x="30" y="${layer.y - h/2}" width="300" height="${h}" rx="5" fill="${layer.color}${alpha}" stroke="${layer.color}40" stroke-width="1.5"/>`;
-    html += `<text x="180" y="${layer.y + 5}" text-anchor="middle" font-family="JetBrains Mono" font-size="${isMain ? 11 : 10}" fill="${layer.color}">${layer.label}</text>`;
+    html += `<rect x="20" y="${layer.y - h/2}" width="320" height="${h}" rx="3" fill="${layer.color}${alpha}" stroke="${layer.color}40" stroke-width="1.5"/>`;
+    html += `<text x="180" y="${layer.y - 2}" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="${layer.color}">${layer.main}</text>`;
+    html += `<text x="180" y="${layer.y + 9}" text-anchor="middle" font-family="JetBrains Mono" font-size="8" fill="${layer.color}99" font-style="italic">${layer.tech}</text>`;
+
     if (i < layers.length - 1) {
-      const nextY = layers[i+1].y + (isMain ? 16 : 13);
-      html += `<line x1="180" y1="${layer.y - h/2}" x2="180" y2="${nextY + 2}" stroke="${layer.color}50" stroke-width="1" stroke-dasharray="${i>=4?'3,3':''}"/>`;
-      html += `<polygon points="175,${nextY + 8} 185,${nextY + 8} 180,${nextY + 14}" fill="${layers[i+1].color}80"/>`;
+      const y_from = layer.y + h/2;
+      const y_to   = layers[i+1].y - h/2;
+      const arrowH = Math.min(8, (y_to - y_from) / 2);
+      html += `<line x1="180" y1="${y_from}" x2="180" y2="${y_to - arrowH}" stroke="${layer.color}50" stroke-width="1"/>`;
+      html += `<polygon points="176,${y_to - arrowH} 184,${y_to - arrowH} 180,${y_to}" fill="${layers[i+1].color}80"/>`;
     }
   });
 
-  html += `<circle cx="90" cy="220" r="4" fill="#C0392B" opacity="0.55"><animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;1;0.55" dur="2s" repeatCount="indefinite"/></circle>`;
-  html += `<circle cx="270" cy="220" r="4" fill="#C0392B" opacity="0.55"><animate attributeName="r" values="3;6;3" dur="2s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;1;0.55" dur="2s" begin="1s" repeatCount="indefinite"/></circle>`;
+  // Dots animés sur la couche attention (i=2, y=122), hors de la zone de texte
+  html += `<circle cx="28" cy="218" r="4" fill="#C0392B" opacity="0.55"><animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;1;0.55" dur="2s" repeatCount="indefinite"/></circle>`;
+  html += `<circle cx="332" cy="218" r="4" fill="#C0392B" opacity="0.55"><animate attributeName="r" values="3;6;3" dur="2s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.55;1;0.55" dur="2s" begin="1s" repeatCount="indefinite"/></circle>`;
 
   svg.innerHTML = html;
 })();
@@ -1262,25 +1284,50 @@ p.body-text{color:var(--txt);font-size:16px;line-height:1.85;margin-bottom:16px}
 
   const tokenSets = {
     'Le ciel apparaît bleu': [
-      {t: ' parce', raw: 0.31}, {t: ' en', raw: 0.18}, {t: ',', raw: 0.12},
-      {t: ' à', raw: 0.10}, {t: ' quand', raw: 0.08}, {t: ' car', raw: 0.06},
-      {t: ' depuis', raw: 0.04}, {t: ' et', raw: 0.03},
+      {t: ' parce', raw: 0.35}, {t: ' car', raw: 0.18}, {t: ' en', raw: 0.12},
+      {t: ' quand', raw: 0.10}, {t: ',', raw: 0.08}, {t: ' à', raw: 0.07},
+      {t: ' depuis', raw: 0.05}, {t: ' et', raw: 0.05},
     ],
     'Le ciel apparaît bleu parce': [
-      {t: ' que', raw: 0.42}, {t: ' à', raw: 0.20}, {t: ' que la', raw: 0.12},
-      {t: ' qu\'', raw: 0.09}, {t: ' du', raw: 0.06}, {t: ' des', raw: 0.04},
-      {t: ' les', raw: 0.03}, {t: ' d\'', raw: 0.02},
+      {t: ' que', raw: 0.55}, {t: ' qu\'', raw: 0.18}, {t: ' à', raw: 0.10},
+      {t: ' du', raw: 0.07}, {t: ' des', raw: 0.04}, {t: ' dans', raw: 0.03},
+      {t: ' les', raw: 0.02}, {t: ' de', raw: 0.01},
     ],
     'Le ciel apparaît bleu parce que': [
-      {t: ' la', raw: 0.38}, {t: ' les', raw: 0.25}, {t: ' la lumière', raw: 0.12},
-      {t: ' l\'', raw: 0.09}, {t: ' des', raw: 0.07}, {t: ' le', raw: 0.04},
-      {t: ' Rayleigh', raw: 0.03}, {t: ' diffusion', raw: 0.02},
+      {t: ' la', raw: 0.42}, {t: ' les', raw: 0.20}, {t: ' l\'', raw: 0.14},
+      {t: ' le', raw: 0.10}, {t: ' des', raw: 0.06}, {t: ' Rayleigh', raw: 0.04},
+      {t: ' diffusion', raw: 0.02}, {t: ' chaque', raw: 0.02},
+    ],
+    'Le ciel apparaît bleu parce que la': [
+      {t: ' lumière', raw: 0.48}, {t: ' diffusion', raw: 0.18}, {t: ' couleur', raw: 0.12},
+      {t: ' longueur', raw: 0.09}, {t: ' dispersion', raw: 0.07}, {t: ' mer', raw: 0.03},
+      {t: ' nuit', raw: 0.02}, {t: ' journée', raw: 0.01},
+    ],
+    'Le ciel apparaît bleu parce que la lumière': [
+      {t: ' du', raw: 0.44}, {t: ' solaire', raw: 0.22}, {t: ' bleue', raw: 0.12},
+      {t: ' est', raw: 0.09}, {t: ' visible', raw: 0.07}, {t: ' blanche', raw: 0.03},
+      {t: ' entre', raw: 0.02}, {t: ' diffuse', raw: 0.01},
+    ],
+    'Le ciel apparaît bleu parce que la lumière du': [
+      {t: ' soleil', raw: 0.58}, {t: ' ciel', raw: 0.16}, {t: ' jour', raw: 0.10},
+      {t: ' spectre', raw: 0.07}, {t: ' matin', raw: 0.04}, {t: ' soir', raw: 0.03},
+      {t: ' rayonnement', raw: 0.01}, {t: ' solaire', raw: 0.01},
+    ],
+    'Le ciel apparaît bleu parce que la lumière du soleil': [
+      {t: ' est', raw: 0.50}, {t: ' frappe', raw: 0.18}, {t: ' traverse', raw: 0.14},
+      {t: ' contient', raw: 0.09}, {t: ' atteint', raw: 0.05}, {t: ' rencontre', raw: 0.02},
+      {t: ' pénètre', raw: 0.01}, {t: ' entre', raw: 0.01},
+    ],
+    'Le ciel apparaît bleu parce que la lumière du soleil est': [
+      {t: ' diffusée', raw: 0.46}, {t: ' dispersée', raw: 0.22}, {t: ' déviée', raw: 0.12},
+      {t: ' réfractée', raw: 0.09}, {t: ' filtrée', raw: 0.06}, {t: ' absorbée', raw: 0.03},
+      {t: ' bleue', raw: 0.01}, {t: ' visible', raw: 0.01},
     ],
   };
   const fallback = [
-    {t: ' lumière', raw: 0.28}, {t: ' le', raw: 0.22}, {t: ' un', raw: 0.14},
-    {t: ' une', raw: 0.10}, {t: ' diffusion', raw: 0.08}, {t: ' les', raw: 0.06},
-    {t: ' bleu', raw: 0.05}, {t: ' molécules', raw: 0.04},
+    {t: ' par', raw: 0.32}, {t: ' dans', raw: 0.20}, {t: ' les', raw: 0.16},
+    {t: ' des', raw: 0.14}, {t: ' aux', raw: 0.08}, {t: ' de', raw: 0.06},
+    {t: ' vers', raw: 0.03}, {t: ' avec', raw: 0.01},
   ];
 
   const barColors = ['#C0392B','#2C5282','#8A5E1A','#276749','#B91C1C','#4A6CA0','#7B4010','#3A6820'];
