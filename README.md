@@ -6,12 +6,11 @@
 
 ## À propos
 
-Ce dépôt contient la **traduction française** de la page interactive originale
+Ce dépôt contient l' **adaptation et la traduction française** de la page interactive originale
 [How LLMs Work](https://github.com/ynarwal/how-llms-work) créée par **[ynarwal](https://github.com/ynarwal)**.
 
 La traduction a été réalisée par **Bertrand Formet** pour [uneIAparjour.fr](https://uneiaparjour.fr),
 avec l'aide de **Claude** (Anthropic).  
-Aucun contenu n'a été modifié — seule la langue a changé.
 
 ---
 
@@ -22,7 +21,7 @@ La page originale est une exploration visuelle et interactive du fonctionnement 
 > *« Intro to Large Language Models »*  
 > [▶ Voir sur YouTube](https://www.youtube.com/watch?v=zjkBMFhNj_g)
 
-Elle couvre l'ensemble du pipeline de construction d'un LLM :
+Elle couvre l'ensemble des étapes de construction d'un LLM :
 collecte des données, tokenisation, pré-entraînement, inférence,
 modèle de base, post-entraînement (SFT + RLHF), psychologie des LLM, RAG.
 
@@ -32,11 +31,11 @@ modèle de base, post-entraînement (SFT + RLHF), psychologie des LLM, RAG.
 
 ### Pourquoi traduire cette page ?
 
-La page de ynarwal est l'une des meilleures introductions visuelles aux LLM disponibles en ligne — pédagogiquement solide, interactive, accessible à un public non technique. La rendre disponible en français répond à un besoin réel pour les publics francophones, notamment dans les contextes éducatifs et de formation professionnelle.
+La page de ynarwal est une très bonne introduction visuelle aux LLM disponible en ligne — pédagogiquement solide, interactive, accessible à un public non technique. La rendre disponible en français peut répondre à un besoin pour les publics francophones, notamment dans les contextes éducatifs et de formation professionnelle.
 
 ### Comment la traduction a été produite
 
-La traduction a été réalisée en une session de travail avec **Claude Sonnet** (Anthropic), dans l'interface claude.ai.
+La traduction a été réalisée avec **Claude Sonnet** (Anthropic), dans l'interface claude.ai.
 
 Le processus s'est déroulé en plusieurs étapes :
 
@@ -44,7 +43,7 @@ Le processus s'est déroulé en plusieurs étapes :
 2. **Adaptation des démos interactives** — la séquence de génération de tokens utilise une phrase en français (« Le ciel apparaît bleu ») avec des tokens candidats adaptés ; le canvas animé de l'intro utilise des fragments en français
 3. **Adaptation du diagramme BPE** — l'exemple illustre la tokenisation du mot « tokenisation » en français
 4. **Ajout du bandeau d'attribution** dans l'introduction, indiquant l'auteur original, le traducteur et l'outil utilisé
-5. **Vérification** de la cohérence terminologique (termes techniques maintenus en anglais quand c'est l'usage : token, embedding, loss, RLHF, SFT, etc.)
+5. **Vérification** de la cohérence terminologique (termes techniques maintenus en anglais mais expliqués quand c'est l'usage : token, embedding, RLHF, SFT, etc.)
 
 ### Ce qui n'a pas été modifié
 
@@ -55,7 +54,7 @@ Le processus s'est déroulé en plusieurs étapes :
 
 ### Note sur la vérification
 
-Le contenu traduit a été relu mais n'a pas fait l'objet d'une vérification factuelle exhaustive. Il est aligné avec ce qui est décrit dans la conférence de Karpathy. Pour toute inexactitude, ouvrir une issue.
+Le contenu traduit a été relu, il est aligné avec ce qui est décrit dans la conférence de Karpathy. Pour toute inexactitude, ouvrir une issue.
 
 ---
 
@@ -65,7 +64,7 @@ Le contenu traduit a été relu mais n'a pas fait l'objet d'une vérification fa
 |---|---|
 | Page originale | [ynarwal](https://github.com/ynarwal/how-llms-work) |
 | Conférence source | [Andrej Karpathy](https://www.youtube.com/watch?v=zjkBMFhNj_g) |
-| Traduction | [Bertrand Formet](https://uneiaparjour.fr) |
+| Traduction et adaptation| [Bertrand Formet](https://uneiaparjour.fr) |
 | Aide à la traduction | [Claude](https://claude.ai) (Anthropic) |
 
 ---
@@ -73,4 +72,4 @@ Le contenu traduit a été relu mais n'a pas fait l'objet d'une vérification fa
 ## Licence
 
 La licence de l'œuvre originale s'applique.  
-La traduction est partagée dans le même esprit — libre d'utilisation pour tout usage pédagogique et non commercial, avec attribution.
+Adaptation et traduction partagées dans le même esprit — libre d'utilisation pour tout usage pédagogique et non commercial, avec attribution.
